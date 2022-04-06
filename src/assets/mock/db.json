@@ -3,7 +3,7 @@
         {
             "id": 1,
             "tableId": 1,
-            "waiterId": 1,
+            "employeeId": 1,
             "items": [
                 {
                     "menuId": 2,
@@ -22,7 +22,7 @@
         {
             "id": 2,
             "tableId": 2,
-            "waiterId": 2,
+            "employeeId": 2,
             "items": [
                 {
                     "menuId": 3,
@@ -58,14 +58,24 @@
             "ingredients": ""
         }
     ],
-    "waiter": [
+    "employees": [
         {
             "id": 1,
-            "name": "fulano"
+            "name": "fulano",
+            "role": "waiter",
+            "password": "123"
         },
         {
             "id": 2,
-            "name": "ciclano"
+            "name": "ciclano",
+            "role": "waiter",
+            "password": "123"
+        },
+        {
+            "id": 3,
+            "name": "foo",
+            "role": "admin",
+            "password": "123"
         }
     ]
 }
