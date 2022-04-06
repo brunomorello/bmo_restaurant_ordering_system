@@ -4,10 +4,22 @@
 
 Import these .css files inside styles attr on angular.json 
 
-`"./node_modules/bootstrap/dist/css/bootstrap.min.css",
-"./node_modules/font-awesome/css/font-awesome.css"`
+`"styles": [
+    "src/styles.css",
+    "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "./node_modules/font-awesome/css/font-awesome.css"
+],`
+
+## Generate *HOME* Module
+
+    `ng g m home --routing -d` 
+    `-d` means to angular run command, show results and do not write anything 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+
+## Generate *HOME* Component
+
+    `ng g c home`
 
 ## Development server
 
