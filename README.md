@@ -21,6 +21,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
     `ng g c home`
 
+## Organize Routes
+
+    > type `<router-outlet></router-outlet>` on app.component.html
+    
+    > open app-routing.module.ts and set a default route and define a lazy loading for Home Module
+
+        > `const routes: Routes = [
+            { path: '', pathMatch: 'full', redirectTo: 'home' },
+            { path: 'home', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule) }
+        ];`
+
+    > set a root route for Home component (open home-routing.module) and add
+    
+        > `{ path: '', component: HomeComponent }`
+        
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
