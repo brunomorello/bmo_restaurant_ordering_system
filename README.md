@@ -1,5 +1,12 @@
 # BmoRestaurantOderSystem
 
+## Set CSS bootstrap and font-awesome on Global Angular CSS
+
+Import these .css files inside styles attr on angular.json 
+
+`"./node_modules/bootstrap/dist/css/bootstrap.min.css",
+"./node_modules/font-awesome/css/font-awesome.css"`
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Development server
