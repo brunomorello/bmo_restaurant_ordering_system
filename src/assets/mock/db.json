@@ -1,0 +1,71 @@
+{
+    "orders": [
+        {
+            "id": 1,
+            "tableId": 1,
+            "waiterId": 1,
+            "items": [
+                {
+                    "menuId": 2,
+                    "quantity": 1
+                },
+                {
+                    "menuId": 1,
+                    "quantity": 3
+                },
+                {
+                    "menuId": 3,
+                    "quantity": 1
+                }
+            ] 
+        },
+        {
+            "id": 2,
+            "tableId": 2,
+            "waiterId": 2,
+            "items": [
+                {
+                    "menuId": 3,
+                    "quantity": 4
+                }
+            ] 
+        }
+    ],
+    "tables": [
+        {
+            "id": 1,
+            "capacity": 2
+        },
+        {
+            "id": 2,
+            "capacity": 4
+        }
+    ],
+    "menu": [
+        {
+            "id": 1,
+            "name": "pizza",
+            "ingredients": "cheese, tomato sauce, oregan"
+        },
+        {
+            "id": 2,
+            "name": "funghi risotto",
+            "ingredients": "risotto, funghi, cheese"
+        },
+        {
+            "id": 3,
+            "name": "beer",
+            "ingredients": ""
+        }
+    ],
+    "waiter": [
+        {
+            "id": 1,
+            "name": "fulano"
+        },
+        {
+            "id": 2,
+            "name": "ciclano"
+        }
+    ]
+}
