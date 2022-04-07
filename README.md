@@ -63,6 +63,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Add a Redirect on login.component.ts (inject Router)
 
     `this.router.navigate(['orders']);`
+
+## Create *Message* module
+
+    `ng g m components/message`
+
+## Create *Message* component
+
+    `ng g c components/message`
+
+## Define message html
+
+## Set `msg` variable with @Input() annotation on message.component and declare MessageComponent on exports on message.module
+
+## Import *Message* component where you want to use it
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
