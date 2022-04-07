@@ -47,6 +47,22 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Generate *AUTHENTICATION* Service
 
     `ng g s authentication/authentication`
+
+## Create a new Module for *Orders*
+
+    `ng g m orders --routing`
+
+## Generate a component for *list orders*
+
+    `ng g c orders/list-orders`
+
+## Add *Orders* module on app-routing module (app-routing.modules.ts)
+
+    `{ path: 'orders', loadChildren: () => import('./orders/orders.module').then((m) => m.OrdersModule) }`
+
+## Add a Redirect on login.component.ts (inject Router)
+
+    `this.router.navigate(['orders']);`
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

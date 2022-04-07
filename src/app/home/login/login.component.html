@@ -1,13 +1,14 @@
 <h4 class="text-center">Login</h4>
 
-<form>
+<!-- Formulário Template-Driven -->
+<form (ngSubmit)="login()">
     <div class="mb-3">
         <label for="inputLogin" class="form-label">Username</label>
-        <input type="text" class="form-control" id="inputLogin" placeholder="Username">
+        <input type="text" class="form-control" id="inputLogin" placeholder="Username" [(ngModel)]="username" name="username">
     </div>
     <div class="mb-3">
         <label for="inputPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" name="password">
     </div>
 
     <div class="d-grid gap-2">
