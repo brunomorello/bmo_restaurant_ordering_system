@@ -96,6 +96,11 @@
       "username": "test1",
       "password": "3333",
       "id": 7
+    },
+    {
+      "username": "test12",
+      "password": "",
+      "id": 8
     }
   ]
 }
