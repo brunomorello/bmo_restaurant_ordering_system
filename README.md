@@ -72,7 +72,21 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
     `ng g c components/message`
 
-## Define message html
+## Define message html on app.module
+
+## Create a new component for new user
+
+    `ng g c home/new-user`
+
+## Create a Service to create New Users
+
+    `ng g s home/new-user/services/new-user`
+
+## Create a Model for New Users
+
+    `ng g interface home/new-user/models/new-user`
+
+## Import *ReactiveFormsModule* on home.module.ts to apply validations before create a new user
 
 ## Set `msg` variable with @Input() annotation on message.component and declare MessageComponent on exports on message.module
 
