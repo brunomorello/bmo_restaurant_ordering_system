@@ -107,6 +107,16 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Create a User Token Model for Auth
 
     `ng g interface authentication/models/user-token/user-token`
+
+## Create Header Module and Component
+
+    `ng g m components/header`
+    `ng g c components/header`
+
+## Create Footer Module and Component
+
+    `ng g m components/footer`
+    `ng g c components/footer`    
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
