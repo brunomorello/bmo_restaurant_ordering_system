@@ -6,15 +6,18 @@
       "employeeId": 1,
       "items": [
         {
-          "menuId": 2,
+          "menuId": 1,
+          "menuItemId": 2,
           "quantity": 1
         },
         {
-          "menuId": 1,
+          "menuId": 2,
+          "menuItemId": 3,
           "quantity": 3
         },
         {
           "menuId": 3,
+          "menuItemId": 4, 
           "quantity": 1
         }
       ]
@@ -44,18 +47,45 @@
   "menu": [
     {
       "id": 1,
-      "name": "pizza",
-      "ingredients": "cheese, tomato sauce, oregan"
+      "name": "Food menu",
+      "items": [
+        {
+          "id": 1,
+          "name": "pizza",
+          "ingredients": "cheese, tomato sauce, oregan",
+          "menuId": 1
+        },
+        {
+          "id": 2,
+          "name": "funghi risotto",
+          "ingredients": "risotto, funghi, cheese",
+          "menuId": 1
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "funghi risotto",
-      "ingredients": "risotto, funghi, cheese"
+      "name": "Drinks",
+      "items":[
+        {
+          "id": 3,
+          "name": "beer",
+          "ingredients": "",
+          "menuId": 2
+        }
+      ]
     },
     {
       "id": 3,
-      "name": "beer",
-      "ingredients": ""
+      "name": "Desserts",
+      "items":[
+        {
+          "id": 4,
+          "name": "Tiramissu",
+          "ingredients": "risotto, funghi, cheese",
+          "menuId": 3
+        }
+      ]
     }
   ],
   "employees": [

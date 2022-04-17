@@ -116,7 +116,22 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Create Footer Module and Component
 
     `ng g m components/footer`
-    `ng g c components/footer`    
+    `ng g c components/footer`
+
+## Create a Card component
+
+    `ng g m components/card`
+    `ng g c components/card`
+
+## Create a Menu-Food component and a Menu-Item-Food component and its Service & Models
+
+    `ng g m components/menu-food`
+    `ng g c components/menu-food`
+    `ng g interface components/menu-food/models/menu-food`
+
+    `ng g m components/menu-item-food`
+    `ng g c components/menu-item-food`
+    `ng g interface components/menu-item-food`
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
