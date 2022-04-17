@@ -91,6 +91,22 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Set `msg` variable with @Input() annotation on message.component and declare MessageComponent on exports on message.module
 
 ## Import *Message* component where you want to use it
+
+## Install jwt-decode
+
+    `npm i jwt-decode`
+
+## Create a Token Authentication Service
+
+    `ng g s services/token`
+
+## Create a User Authentication Service
+
+    `ng g s authentication/services/user/user`
+
+## Create a User Token Model for Auth
+
+    `ng g interface authentication/models/user-token/user-token`
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
