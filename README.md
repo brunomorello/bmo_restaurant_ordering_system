@@ -4,11 +4,109 @@
 
 Import these .css files inside styles attr on angular.json 
 
-`"./node_modules/bootstrap/dist/css/bootstrap.min.css",
-"./node_modules/font-awesome/css/font-awesome.css"`
+`"styles": [
+    "src/styles.css",
+    "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "./node_modules/font-awesome/css/font-awesome.css"
+],`
+
+## Generate *HOME* Module
+
+    `ng g m home --routing -d` 
+    `-d` means to angular run command, show results and do not write anything 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
+## Generate *HOME* Component
+
+    `ng g c home`
+
+## Organize Routes
+
+    > type `<router-outlet></router-outlet>` on app.component.html
+    
+    > open app-routing.module.ts and set a default route and define a lazy loading for Home Module
+
+        > `const routes: Routes = [
+            { path: '', pathMatch: 'full', redirectTo: 'home' },
+            { path: 'home', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule) }
+        ];`
+
+    > set a root route for Home component (open home-routing.module) and add
+    
+        > `{ path: '', component: HomeComponent }`
+
+## Generate *LOGIN* Componenet
+
+    `ng g c home/login`
+
+## Generate *AUTHENTICATION* Module
+
+    `ng g m authentication`
+
+## Generate *AUTHENTICATION* Service
+
+    `ng g s authentication/authentication`
+
+## Create a new Module for *Orders*
+
+    `ng g m orders --routing`
+
+## Generate a component for *list orders*
+
+    `ng g c orders/list-orders`
+
+## Add *Orders* module on app-routing module (app-routing.modules.ts)
+
+    `{ path: 'orders', loadChildren: () => import('./orders/orders.module').then((m) => m.OrdersModule) }`
+
+## Add a Redirect on login.component.ts (inject Router)
+
+    `this.router.navigate(['orders']);`
+
+## Create *Message* module
+
+    `ng g m components/message`
+
+## Create *Message* component
+
+    `ng g c components/message`
+
+## Define message html on app.module
+
+## Create a new component for new user
+
+    `ng g c home/new-user`
+
+## Create a Service to create New Users
+
+    `ng g s home/new-user/services/new-user`
+
+## Create a Model for New Users
+
+    `ng g interface home/new-user/models/new-user`
+
+## Import *ReactiveFormsModule* on home.module.ts to apply validations before create a new user
+
+## Set `msg` variable with @Input() annotation on message.component and declare MessageComponent on exports on message.module
+
+## Import *Message* component where you want to use it
+
+## Install jwt-decode
+
+    `npm i jwt-decode`
+
+## Create a Token Authentication Service
+
+    `ng g s services/token`
+
+## Create a User Authentication Service
+
+    `ng g s authentication/services/user/user`
+
+## Create a User Token Model for Auth
+
+    `ng g interface authentication/models/user-token/user-token`
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

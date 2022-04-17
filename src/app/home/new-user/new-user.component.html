@@ -1,0 +1,59 @@
+<h4 class="text-center">Sign in</h4>
+
+<form class="form mt-4" [formGroup]="newUserForm" (submit)="create()">
+    <div class="mb-3">
+        <label for="new-user-name">Full Name</label>
+        <input formControlName="name" type="text" id="new-user-name" class="form-control" placeholder="Type your Name">
+    </div>
+    <app-message class="mb-3"
+        *ngIf="
+            newUserForm.get('name')?.touched &&
+            newUserForm.get('name')?.errors?.['required']"
+        msg="You must inform your name"></app-message>
+
+    <!-- <app-message class="mb-3"
+        *ngIf="
+            newUserForm.get('name')?.touched &&
+            newUserForm.get('name')?.errors?.['minLength']"
+        msg="Please type a Name with at least 3 chars"></app-message> -->
+
+    <div class="mb-3">
+        <label for="new-user-role">Select new user Role</label>
+        <select formControlName="role" name="new-user-role" id="new-user-role" class="form-select">
+            <option value="none" disabled selected>Select</option>
+            <option value="waiter">Waiter</option>
+            <option value="kitchen">Kitchen</option>
+            <option value="cashier">Cashier</option>
+        </select>
+    </div>
+
+    <app-message class="mb-3"
+        *ngIf="
+            newUserForm.get('role')?.touched &&
+            newUserForm.get('role')?.errors?.['required']"
+        msg="Please select a role"></app-message>
+
+    <div class="mb-3">
+        <label for="new-user-password">Set your password</label>
+        <input formControlName="pwd" type="password" id="new-user-password" class="form-control" placeholder="Create a password">
+    </div>
+
+    <app-message class="mb-5"
+        *ngIf="
+            newUserForm.get('pwd')?.touched &&
+            newUserForm.get('pwd')?.errors"
+        msg="Password must have lower and upper characters, at least one number and one special character (@ ! - _)">
+    </app-message>
+
+    <app-message class="mb-5"
+        *ngIf="newUserForm.errors?.['nameAndPasswordAreEquals']"
+        msg="Your password should not be equals to your name!">
+
+    </app-message>
+
+    <div class="d-grid gap-2 mt-3">
+        <button class="btn btn-primary">Register</button>
+    </div>
+</form>
+
+<p><small>Already have a username? Please <a [routerLink]="['']">Sign in</a></small></p>

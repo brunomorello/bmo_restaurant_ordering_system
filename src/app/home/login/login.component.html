@@ -1,0 +1,41 @@
+<h4 class="text-center">Login</h4>
+
+<!-- Formulário Template-Driven -->
+<form (ngSubmit)="login()" #loginForm="ngForm">
+    <div class="mb-3">
+        <label for="inputLogin" class="form-label">Username</label>
+        <input type="text" 
+            class="form-control" 
+            id="inputLogin" 
+            placeholder="Username" 
+            [(ngModel)]="username" 
+            name="username"
+            #fieldUsername="ngModel"
+            required>
+    </div>
+
+    <app-message 
+        *ngIf="fieldUsername.invalid && fieldUsername.touched"
+        msg="Username is required"></app-message>
+
+    <div class="mb-3">
+        <label for="inputPassword" class="form-label">Password</label>
+        <input type="password" 
+            class="form-control" 
+            placeholder="Password" 
+            [(ngModel)]="password" 
+            name="password"
+            #fieldPassword="ngModel"
+            required>
+    </div>
+
+    <app-message
+        *ngIf="fieldPassword.invalid && fieldPassword.touched"
+        msg="Password is required"></app-message>
+
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+    </div>
+</form>
+
+<p><small>Are you new here? <a [routerLink]="['new-user']">Sign up</a> now!</small></p>
