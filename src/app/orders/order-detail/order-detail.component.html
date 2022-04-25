@@ -7,7 +7,11 @@
                 <p>Quantity: {{ orderItem.quantity }}</p>
             </div>
         </div>
+        <button (click)="delete(order)" class="btn btn-danger btn-lg">
+            Delete 
+            <i class="fa fa-trash-o fa-2x pull-right"></i>
+        </button>
     </div>
-    
-    <a [routerLink]="['']">Go back <i class="fa-solid fa-circle-arrow-left"></i></a>
+
+    <a [routerLink]="['']">Go back <i class="fa fa-arrow-left fa-2x"></i></a>
 </div>

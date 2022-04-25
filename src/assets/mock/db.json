@@ -8,8 +8,8 @@
         {
           "menuItem": {
             "id": 1,
-            "name":"funghi risotto",
-            "ingredients":"risotto, funghi, cheese"
+            "name": "funghi risotto",
+            "ingredients": "risotto, funghi, cheese"
           },
           "quantity": 1
         },
@@ -17,7 +17,7 @@
           "menuItem": {
             "id": 3,
             "name": "beer",
-            "ingredients":""
+            "ingredients": ""
           },
           "quantity": 3
         },
@@ -28,7 +28,7 @@
             "ingredients": "eggs, heavy cream, granulated sugar, coffee, rum, unsweetened cocoa powder, ladyfingers, bittersweet chocolate"
           },
           "quantity": 1
-        }        
+        }
       ]
     },
     {
@@ -40,7 +40,37 @@
           "menuItem": {
             "id": 3,
             "name": "beer",
-            "ingredients":""
+            "ingredients": ""
+          },
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tableId": 2,
+      "employeeId": 2,
+      "items": [
+        {
+          "menuItem": {
+            "id": 3,
+            "name": "beer",
+            "ingredients": ""
+          },
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "tableId": 2,
+      "employeeId": 2,
+      "items": [
+        {
+          "menuItem": {
+            "id": 3,
+            "name": "beer",
+            "ingredients": ""
           },
           "quantity": 4
         }
@@ -79,7 +109,7 @@
     {
       "id": 2,
       "name": "Drinks",
-      "items":[
+      "items": [
         {
           "id": 3,
           "name": "beer",
@@ -91,7 +121,7 @@
     {
       "id": 3,
       "name": "Desserts",
-      "items":[
+      "items": [
         {
           "id": 4,
           "name": "Tiramissu",
