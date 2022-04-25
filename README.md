@@ -127,11 +127,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
     `ng g m components/menu-food`
     `ng g c components/menu-food`
-    `ng g interface components/menu-food/models/menu-food`
+    `ng g s components/menu-food/service/menu-food`
+    `ng g interface components/menu-food/model/menu-food`
 
     `ng g m components/menu-item-food`
     `ng g c components/menu-item-food`
     `ng g interface components/menu-item-food`
+    `ng g s components/menu-item-food/service/menu-item-food`
+    `ng g interface components/menu-item-food/model/menu-item-food`
+
+## Create a Route Guard (Can Load) for ordering list
+
+    `ng g guard authentication/authentication`
+
+    > Define on app-routing.module which paths apply this guard
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

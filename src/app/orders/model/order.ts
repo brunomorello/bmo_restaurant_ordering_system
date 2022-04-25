@@ -5,6 +5,8 @@ export interface Order {
     tableId: number;
     employeeId: number;
     items: Array<OrderItem>;
+    createdAt: string;
+    // status: 
 }
 
 export type Orders = Array<Order>;

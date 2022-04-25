@@ -1,4 +1,4 @@
-import { MenuItemFood } from "../../menu-item-food/model/menu-item-food";
+import { MenuItemFood } from "./menu-item-food";
 
 export interface MenuFood {
     id: number;

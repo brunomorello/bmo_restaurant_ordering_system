@@ -1,5 +1,6 @@
+import { MenuItemFood } from "./menu-item-food";
+
 export interface OrderItem {
-    menuId: number;
-    menuItemId: number;
+    menuItem: MenuItemFood;
     quantity: number;
 }
