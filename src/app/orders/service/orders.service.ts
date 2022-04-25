@@ -15,24 +15,11 @@ export class OrdersService {
 
   constructor(private httpClient: HttpClient, private tokenService: TokenService) { }
 
-  getOrders(userToken: UserToken): Observable<Orders> {
-    const token = this.tokenService.getToken();
-    const headers = new HttpHeaders().append('x-access-token', token);
-    
-    console.log('current user: ');
-    console.log(userToken);
-    
-    return this.httpClient.get<Orders>(`${API}/orders`, {
-      headers
-    });
+  getOrders(userToken: UserToken): Observable<Orders> {   
+    return this.httpClient.get<Orders>(`${API}/orders`);
   }
 
   getOrderById(id: number): Observable<Order> {
-    const token = this.tokenService.getToken();
-    const headers = new HttpHeaders().append('x-access-token', token);
-
-    return this.httpClient.get<Order>(`${API}/orders/${id}`, {
-      headers
-    });
+    return this.httpClient.get<Order>(`${API}/orders/${id}`);
   }
 }
