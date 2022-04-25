@@ -26,4 +26,13 @@ export class OrdersService {
       headers
     });
   }
+
+  getOrderById(id: number): Observable<Order> {
+    const token = this.tokenService.getToken();
+    const headers = new HttpHeaders().append('x-access-token', token);
+
+    return this.httpClient.get<Order>(`${API}/orders/${id}`, {
+      headers
+    });
+  }
 }

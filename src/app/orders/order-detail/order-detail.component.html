@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="bg-white border" *ngIf="orderObservalbe | async as order">
+        <div class="row" *ngFor="let orderItem of order.items">
+            <div class="col">
+                <h2> {{ orderItem.menuItem.name }} </h2>
+                <small>{{ orderItem.menuItem.ingredients }} </small>
+                <p>Quantity: {{ orderItem.quantity }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <a [routerLink]="['']">Go back <i class="fa-solid fa-circle-arrow-left"></i></a>
+</div>
