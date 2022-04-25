@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TokenService } from 'src/app/authentication/services/token/token.service';
 import { environment } from 'src/environments/environment';
-import { MenusFood } from '../model/menu-food';
+import { MenusFood } from '../../../orders/model/menu-food';
 
 const API = environment.apiURL;
 
