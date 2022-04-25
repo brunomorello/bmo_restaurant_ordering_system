@@ -1,0 +1,20 @@
+<div class="card m-3" style="max-width: 18rem;">
+    <div class="row g-0">
+        <img src="../../../assets/img/image.png" 
+            alt="test" 
+            class="card-img-top rounded-start">
+    </div>
+
+    <div class="col md-8">
+        <div class="card-body">
+            <h5 class="card-title">{{ title }} </h5>
+            <ng-content></ng-content>
+            <!-- <p class="card-text"> {{ content }}</p> -->
+            <p class="card-text">
+                <small class="text-muted">
+                    {{ timestampMsg }}
+                </small>
+            </p>
+        </div>
+    </div>
+</div>

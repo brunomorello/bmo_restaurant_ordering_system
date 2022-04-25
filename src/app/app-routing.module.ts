@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from './authentication/authentication.guard';
+import { LoginGuard } from './authentication/login.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'  },
-  { path: 'home', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule) },
-  { path: 'orders', loadChildren: () => import('./orders/orders.module').then((m) => m.OrdersModule) }
+  // lazy loading
+  { path: 'home', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    canLoad: [LoginGuard] },
+  { path: 'orders', loadChildren: () => import('./orders/orders.module').then((m) => m.OrdersModule),
+    canLoad: [AuthenticationGuard] }
 ];
 
 @NgModule({

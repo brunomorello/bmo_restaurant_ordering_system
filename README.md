@@ -107,6 +107,65 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Create a User Token Model for Auth
 
     `ng g interface authentication/models/user-token/user-token`
+
+## Create Header Module and Component
+
+    `ng g m components/header`
+    `ng g c components/header`
+
+## Create Footer Module and Component
+
+    `ng g m components/footer`
+    `ng g c components/footer`
+
+## Create a Card component
+
+    `ng g m components/card`
+    `ng g c components/card`
+
+## Create a Menu-Food component and a Menu-Item-Food component and its Service & Models
+
+    `ng g m components/menu-food`
+    `ng g c components/menu-food`
+    `ng g s components/menu-food/service/menu-food`
+    `ng g interface components/menu-food/model/menu-food`
+
+    `ng g m components/menu-item-food`
+    `ng g c components/menu-item-food`
+    `ng g interface components/menu-item-food`
+    `ng g s components/menu-item-food/service/menu-item-food`
+    `ng g interface components/menu-item-food/model/menu-item-food`
+
+## Create a Route Guard (Can Load) for ordering list
+
+    `ng g guard authentication/authentication`
+
+    > Define on app-routing.module which paths apply this guard
+
+## Create an Interceptor
+
+    `ng g interceptor authentication/authentication`
+
+## Register the Interceptor on authentication module
+
+    providers: [
+        {
+        provide: HTTP_INTERCEPTORS,
+        useClass: AuthenticationInterceptor,
+        multi: true
+        }
+    ] 
+
+## Create a Resolver to use with GuardResolver to improve perfomance to retrieve data from server
+
+    `ng g resolver orders/list-orders/list-orders`
+
+    > Implement retrieve logic on list-orders.resolver.ts
+    > Open orders-routing.module.ts and add a resolve
+
+## Import Authentication module on app-module to use registered Interceptor
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

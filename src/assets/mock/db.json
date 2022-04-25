@@ -6,15 +6,27 @@
       "employeeId": 1,
       "items": [
         {
-          "menuId": 2,
+          "menuItem": {
+            "id": 1,
+            "name": "funghi risotto",
+            "ingredients": "risotto, funghi, cheese"
+          },
           "quantity": 1
         },
         {
-          "menuId": 1,
+          "menuItem": {
+            "id": 3,
+            "name": "beer",
+            "ingredients": ""
+          },
           "quantity": 3
         },
         {
-          "menuId": 3,
+          "menuItem": {
+            "id": 4,
+            "name": "Tiramissu",
+            "ingredients": "eggs, heavy cream, granulated sugar, coffee, rum, unsweetened cocoa powder, ladyfingers, bittersweet chocolate"
+          },
           "quantity": 1
         }
       ]
@@ -25,7 +37,41 @@
       "employeeId": 2,
       "items": [
         {
-          "menuId": 3,
+          "menuItem": {
+            "id": 3,
+            "name": "beer",
+            "ingredients": ""
+          },
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "tableId": 2,
+      "employeeId": 2,
+      "items": [
+        {
+          "menuItem": {
+            "id": 3,
+            "name": "beer",
+            "ingredients": ""
+          },
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "tableId": 2,
+      "employeeId": 2,
+      "items": [
+        {
+          "menuItem": {
+            "id": 3,
+            "name": "beer",
+            "ingredients": ""
+          },
           "quantity": 4
         }
       ]
@@ -44,18 +90,45 @@
   "menu": [
     {
       "id": 1,
-      "name": "pizza",
-      "ingredients": "cheese, tomato sauce, oregan"
+      "name": "Food menu",
+      "items": [
+        {
+          "id": 1,
+          "name": "pizza",
+          "ingredients": "cheese, tomato sauce, oregan",
+          "menuId": 1
+        },
+        {
+          "id": 2,
+          "name": "funghi risotto",
+          "ingredients": "risotto, funghi, cheese",
+          "menuId": 1
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "funghi risotto",
-      "ingredients": "risotto, funghi, cheese"
+      "name": "Drinks",
+      "items": [
+        {
+          "id": 3,
+          "name": "beer",
+          "ingredients": "",
+          "menuId": 2
+        }
+      ]
     },
     {
       "id": 3,
-      "name": "beer",
-      "ingredients": ""
+      "name": "Desserts",
+      "items": [
+        {
+          "id": 4,
+          "name": "Tiramissu",
+          "ingredients": "risotto, funghi, cheese",
+          "menuId": 3
+        }
+      ]
     }
   ],
   "employees": [

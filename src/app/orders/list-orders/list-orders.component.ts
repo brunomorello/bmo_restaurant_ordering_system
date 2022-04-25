@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, switchMap } from 'rxjs';
+import { UserToken } from 'src/app/authentication/models/user-token/user-token';
+import { UserService } from 'src/app/authentication/services/user/user.service';
+import { Orders } from '../model/order';
+import { OrdersService } from '../service/orders.service';
 
 @Component({
   selector: 'app-list-orders',
@@ -7,9 +13,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListOrdersComponent implements OnInit {
 
-  constructor() { }
+  orders!: Orders;
+  currentUserSub!: string;
 
-  ngOnInit(): void {
+  constructor(
+    private activatedRoute: ActivatedRoute
+  ) { }
+  
+  ngOnInit(): void { 
+    this.activatedRoute.params.subscribe((param) => {
+      this.orders = this.activatedRoute.snapshot.data['orders'];
+    });
   }
 
 }
