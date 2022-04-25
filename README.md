@@ -154,9 +154,18 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
         useClass: AuthenticationInterceptor,
         multi: true
         }
-    ]    
+    ] 
+
+## Create a Resolver to use with GuardResolver to improve perfomance to retrieve data from server
+
+    `ng g resolver orders/list-orders/list-orders`
+
+    > Implement retrieve logic on list-orders.resolver.ts
+    > Open orders-routing.module.ts and add a resolve
 
 ## Import Authentication module on app-module to use registered Interceptor
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

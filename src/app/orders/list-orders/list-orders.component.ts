@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { UserToken } from 'src/app/authentication/models/user-token/user-token';
 import { UserService } from 'src/app/authentication/services/user/user.service';
@@ -12,24 +13,17 @@ import { OrdersService } from '../service/orders.service';
 })
 export class ListOrdersComponent implements OnInit {
 
-  orders!: Observable<Orders>;
+  orders!: Orders;
   currentUserSub!: string;
 
   constructor(
-    private userService: UserService,
-    private ordersService: OrdersService
+    private activatedRoute: ActivatedRoute
   ) { }
   
-  ngOnInit(): void {
-
-    // using rxjs
-    this.orders = this.userService.returnUser()
-      .pipe(
-        switchMap((user) => {
-          this.currentUserSub = user.sub ?? '';
-          return this.ordersService.getOrders(user);
-        })
-      );
+  ngOnInit(): void { 
+    this.activatedRoute.params.subscribe((param) => {
+      this.orders = this.activatedRoute.snapshot.data['orders'];
+    });
   }
 
 }
