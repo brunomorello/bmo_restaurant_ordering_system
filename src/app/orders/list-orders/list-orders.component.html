@@ -1,1 +1,14 @@
-<p>list-orders works!</p>
+<div class="container" *ngIf="orders | async as ordersList">
+    <div *ngFor="let order of ordersList" class="row align-items-start">
+        <div class="badge bg-primary text-wrap">
+            Order: #{{ order.id }} - Table: {{ order.tableId }} - Waiter: {{ order.employeeId }}
+        </div>
+
+        <div *ngFor="let orderItem of order.items" class="col-sm-4">
+            <a [routerLink]="['/orders', order.id]"></a>
+            <app-card
+                [title]="orderItem.menuItem.name + ' -- Qty: ' + orderItem.quantity"
+            ></app-card>
+        </div>
+    </div>
+</div>
