@@ -141,6 +141,22 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     `ng g guard authentication/authentication`
 
     > Define on app-routing.module which paths apply this guard
+
+## Create an Interceptor
+
+    `ng g interceptor authentication/authentication`
+
+## Register the Interceptor on authentication module
+
+    providers: [
+        {
+        provide: HTTP_INTERCEPTORS,
+        useClass: AuthenticationInterceptor,
+        multi: true
+        }
+    ]    
+
+## Import Authentication module on app-module to use registered Interceptor
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
