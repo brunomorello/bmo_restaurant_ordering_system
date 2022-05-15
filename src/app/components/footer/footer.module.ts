@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer.component';
 import { RouterModule } from '@angular/router';
+import { SharedModuleModule } from 'src/app/shared/shared-module/shared-module.module';
 
 
 
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    SharedModuleModule
   ],
   exports: [
     RouterModule,
