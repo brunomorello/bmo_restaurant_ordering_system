@@ -1,17 +1,14 @@
-<header>
+<header *ngIf="userToken | async as userToken">
     <mat-toolbar color="primary">
-        <button mat-icon-button class="example-icon" aria-label="menu">
+        <button mat-icon-button class="example-icon" aria-label="menu" (click)="sidenav.toggle()" *ngIf="userToken.sub">
             <mat-icon>menu</mat-icon>
         </button>
         <span>
             BMO Ordering System
         </span>
         <span class="header-menu-spacer"></span>
-            <!-- {{ userToken?.sub }} -->
-        <section *ngIf="userToken | async as currentUser">
-            {{ currentUser.sub }}
-        </section>
-        <div *ngIf="userToken | async as userToken">
+        
+        <div>
             <div *ngIf="userToken.sub; else login">
                 <button mat-icon-button (click)="logout()">
                     <mat-icon>logout</mat-icon>

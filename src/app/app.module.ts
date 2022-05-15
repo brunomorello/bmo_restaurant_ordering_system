@@ -8,6 +8,9 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { FooterModule } from './components/footer/footer.module';
 import { HeaderModule } from './components/header/header.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModuleModule } from './shared/shared-module/shared-module.module';
+import { HeaderNavSidebarComponent } from './components/header-nav-sidebar/header-nav-sidebar.component';
+import { HeaderNavSidebarModule } from './components/header-nav-sidebar/header-nav-sidebar.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     HeaderModule,
     FooterModule,
+    HeaderNavSidebarModule,
     AuthenticationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

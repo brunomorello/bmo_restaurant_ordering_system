@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav'
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bmo_restaurant_oder_system';
+
+  @ViewChild(MatSidenav)
+  matSidenav!: MatSidenav;
+
+  constructor(private breakpointObserver: BreakpointObserver) {
+
+  }
+
+  ngAfterViewInit() {
+    this.breakpointObserver.observe(['']).subscribe(res => console.log(res));
+  }
 }
