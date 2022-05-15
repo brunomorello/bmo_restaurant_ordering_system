@@ -26,7 +26,7 @@ export class OrderDetailComponent implements OnInit {
 
   delete(order: Order): void {
     this.ordersService.deleteOrderById(order.id).subscribe(() => {
-      this.router.navigate(['']);
+      this.router.navigate(['../']);
     }, (err) => {
       console.error(err);      
     })

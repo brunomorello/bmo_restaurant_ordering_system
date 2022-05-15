@@ -1,6 +1,6 @@
 # BmoRestaurantOderSystem
 
-## Set CSS bootstrap and font-awesome on Global Angular CSS
+## Set CSS bootstrap and font-awesome on Global Angular CSS (removed bootstrap and font-awesome)
 
 Import these .css files inside styles attr on angular.json 
 
@@ -165,6 +165,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Import Authentication module on app-module to use registered Interceptor
 
+
+## Install Angular Material ##
+
+    `ng add @angular/material`
+
+
+
+----------------------------------------------------------------------------------------
 
 ## Development server
 

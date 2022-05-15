@@ -1,41 +1,42 @@
-<h4 class="text-center">Login</h4>
+<h4>Login</h4>
 
 <!-- Template-Driven Form (validations on template) -->
 <form (ngSubmit)="login()" #loginForm="ngForm">
-    <div class="mb-3">
-        <label for="inputLogin" class="form-label">Username</label>
-        <input type="text" 
-            class="form-control" 
-            id="inputLogin" 
-            placeholder="Username" 
-            [(ngModel)]="username" 
-            name="username"
-            #fieldUsername="ngModel"
-            required>
-    </div>
-
-    <app-message 
+    <section>
+        <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput
+                id="inputLogin" 
+                placeholder="Username" 
+                [(ngModel)]="username" 
+                name="username"
+                #fieldUsername="ngModel"
+                required>
+        </mat-form-field>
+    </section>
+    <section>
+        <app-message 
         *ngIf="fieldUsername.invalid && fieldUsername.touched"
         msg="Username is required"></app-message>
-
-    <div class="mb-3">
-        <label for="inputPassword" class="form-label">Password</label>
-        <input type="password" 
-            class="form-control" 
-            placeholder="Password" 
-            [(ngModel)]="password" 
-            name="password"
-            #fieldPassword="ngModel"
-            required>
-    </div>
-
-    <app-message
-        *ngIf="fieldPassword.invalid && fieldPassword.touched"
-        msg="Password is required"></app-message>
-
-    <div class="d-grid gap-2">
-        <button class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
-    </div>
+    </section>
+    <section>
+        <mat-form-field appearance="fill">
+            <input matInput type="password"
+                placeholder="Password" 
+                [(ngModel)]="password" 
+                name="password"
+                #fieldPassword="ngModel"
+                required>
+        </mat-form-field>
+    </section>
+    <section>
+        <app-message
+            *ngIf="fieldPassword.invalid && fieldPassword.touched"
+            msg="Password is required"></app-message>
+    </section>
+    <section>
+        <button mat-raised-button color="primary" [disabled]="loginForm.invalid">Login</button>
+    </section>
 </form>
 
 <p><small>Are you new here? <a [routerLink]="['new-user']">Sign up</a> now!</small></p>
