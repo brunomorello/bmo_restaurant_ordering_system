@@ -22,6 +22,7 @@ export class ListOrdersComponent implements OnInit {
   
   ngOnInit(): void { 
     this.activatedRoute.params.subscribe((param) => {
+      console.log(param);
       this.orders = this.activatedRoute.snapshot.data['orders'];
     });
   }

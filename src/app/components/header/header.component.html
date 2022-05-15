@@ -1,19 +1,29 @@
-<header class="sticky-top">
-    <nav class="navbar navbar-ligh bg-white">
-        <a class="navbar-brand">BMO Ordering System</a>
+<header>
+    <mat-toolbar color="primary">
+        <button mat-icon-button class="example-icon" aria-label="menu">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>
+            BMO Ordering System
+        </span>
+        <span class="header-menu-spacer"></span>
+            <!-- {{ userToken?.sub }} -->
+        <section *ngIf="userToken | async as currentUser">
+            {{ currentUser.sub }}
+        </section>
         <div *ngIf="userToken | async as userToken">
             <div *ngIf="userToken.sub; else login">
-                <i class="fa fa-user mr-1"></i>
-                <a class="mr-1">{{ userToken.sub }}</a>
-                <a (click)="logout()">logout</a>
+                <button mat-icon-button (click)="logout()">
+                    <mat-icon>logout</mat-icon>
+                </button>
             </div>
         </div>
-    </nav>
 
-    <ng-template #login>
-        <span class="navbar-text">
-            <!-- dont forget to import RouterModule on header module -->
-            <a [routerLink]="['']">Login</a>
-        </span>
-    </ng-template>
+        <ng-template #login>
+            <!-- dont forget to import RouterModule on header module  -->
+           <button mat-icon-button [routerLink]="['']">
+               <mat-icon>login</mat-icon>
+           </button>
+        </ng-template>
+    </mat-toolbar>
 </header>

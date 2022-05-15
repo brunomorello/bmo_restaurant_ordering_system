@@ -1,6 +1,6 @@
 # BmoRestaurantOderSystem
 
-## Set CSS bootstrap and font-awesome on Global Angular CSS
+## Set CSS bootstrap and font-awesome on Global Angular CSS (removed bootstrap and font-awesome)
 
 Import these .css files inside styles attr on angular.json 
 

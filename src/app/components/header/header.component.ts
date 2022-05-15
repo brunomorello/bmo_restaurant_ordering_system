@@ -11,7 +11,7 @@ import { UserService } from 'src/app/authentication/services/user/user.service';
 })
 export class HeaderComponent implements OnInit {
 
-  userToken: Observable<UserToken> | undefined;
+  userToken?: Observable<UserToken>;
   
   constructor(private userService: UserService, private router: Router) { }
   

@@ -1,16 +1,40 @@
-<!-- <div class="container" *ngIf="orders | async as ordersList"> -->
-    <div class="container">    
-    <div *ngFor="let order of orders" class="row align-items-start">
-        <a [routerLink]="['/orders', order.id]">
-            <div class="badge bg-primary text-wrap">
+<cdk-accordion class="example-accordion">
+    <cdk-accordion-item
+      *ngFor="let order of orders; let index = index;"
+      #accordionItem="cdkAccordionItem"
+      class="example-accordion-item"
+      role="button"
+      tabindex="0"
+      [attr.id]="'accordion-header-' + index"
+      [attr.aria-expanded]="accordionItem.expanded"
+      [attr.aria-controls]="'accordion-body-' + index">
+        <div class="example-accordion-item-header" (click)="accordionItem.toggle()">
+            <a [routerLink]="['/orders', order.id]">
                 Order: #{{ order.id }} - Table: {{ order.tableId }} - Waiter: {{ order.employeeId }}
-            </div>
-        </a>
-
-        <div *ngFor="let orderItem of order.items" class="col-sm-4">
-            <app-card
-                [title]="orderItem.menuItem.name + ' -- Qty: ' + orderItem.quantity"
-            ></app-card>
+            </a>
+            <span class="example-accordion-item-description">
+                Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+            </span>
         </div>
-    </div>
-</div>
+        <mat-card *ngFor="let orderItem of order.items"
+            class="example-accordion-item-body"
+            role="region"
+            [style.display]="accordionItem.expanded ? '' : 'none'"
+            [attr.id]="'accordion-body-' + index"
+            [attr.aria-labelledby]="'accordion-header-' + index">
+
+            <mat-card-title>
+                {{ orderItem.menuItem.name }} 
+            </mat-card-title>
+            <mat-card-subtitle>Qty: {{ orderItem.quantity }}</mat-card-subtitle>
+            <img src="../../../assets/img/image.png" 
+            alt="test" 
+            class="card-img-top rounded-start">
+            <mat-card-content>
+                <p>
+                  :)  
+                </p>
+              </mat-card-content>
+        </mat-card>
+    </cdk-accordion-item>
+</cdk-accordion>

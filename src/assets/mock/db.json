@@ -60,21 +60,6 @@
           "quantity": 4
         }
       ]
-    },
-    {
-      "id": 5,
-      "tableId": 2,
-      "employeeId": 2,
-      "items": [
-        {
-          "menuItem": {
-            "id": 3,
-            "name": "beer",
-            "ingredients": ""
-          },
-          "quantity": 4
-        }
-      ]
     }
   ],
   "tables": [
